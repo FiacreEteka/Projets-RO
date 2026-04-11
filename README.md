@@ -23,6 +23,12 @@ Sélection d'objets à emporter dans un sac à dos pour maximiser la valeur tota
 - **Méthode** : Programmation en nombres entiers
 - **Variables** : Binaires
 
+### 4. [Coloration de Graphe](./coloration-graphe/)
+Planning d'examens avec nombre minimum de créneaux.
+- **Outils** : OR-Tools CP-SAT, NetworkX, Matplotlib
+- **Méthode** : Programmation en nombres entiers
+- **Variables** : Binaires
+
 ## Compétences mobilisées
 - Modélisation mathématique (variables, fonction objectif, contraintes)
 - Programmation linéaire et en nombres entiers
