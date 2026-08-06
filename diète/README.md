@@ -6,7 +6,7 @@ L'objectif est de composer un menu journalier au coût minimum tout en
 respectant les besoins nutritionnels d'un patient.
 
 ## Modèle mathématique
-- **Variables** : x_i = quantité de l'aliment i consommée (en grammes)
+- **Variables** : $x_i$ = quantité de l'aliment i consommée (en grammes)
 - **Objectif** : Minimiser le coût total du menu
 - **Contraintes** :
   - Apport minimum en calories, protéines, glucides et lipides
