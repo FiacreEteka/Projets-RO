@@ -24,3 +24,28 @@ Minimiser la distance totale : Min Z = Σ_i Σ_j d_ij * x_ij
 ## Résultats
 
 **Tour optimal :**
+Paris → Nantes → Bordeaux → Marseille → Lyon → Strasbourg → Paris
+
+| Étape | Distance |
+|---|---|
+| Paris → Nantes | 385 km |
+| Nantes → Bordeaux | 340 km |
+| Bordeaux → Marseille | 640 km |
+| Marseille → Lyon | 315 km |
+| Lyon → Strasbourg | 490 km |
+| Strasbourg → Paris | 490 km |
+| **Total** | **2 660 km** |
+
+## Structure du projet
+tsp/
+├── data/
+│ └── distances.csv
+├── notebooks/
+│ └── tsp.ipynb
+└── README.md
+
+## Outils
+- Python 3.12
+- PuLP
+- GLPK
+- pandas

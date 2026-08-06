@@ -36,6 +36,12 @@ Planning d'examens avec nombre minimum de créneaux.
 - Scripts Python structurés en fonctions
 - Gestion de version : Git / GitHub
 
+### 5. [Problème du Voyageur de Commerce (TSP)](./tsp/)
+Tour optimal passant par 6 villes françaises avec contraintes MTZ.
+- **Outils** : PuLP, GLPK, pandas
+- **Méthode** : PLNE + contraintes MTZ
+- **Variables** : Binaires + entières
+
 
 ## Auteur
 Fiacre Eteka — Master 1
