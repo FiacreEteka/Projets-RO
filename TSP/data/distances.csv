@@ -1,0 +1,7 @@
+ville,Paris,Lyon,Marseille,Bordeaux,Nantes,Strasbourg
+Paris,0,465,775,585,385,490
+Lyon,465,0,315,540,660,490
+Marseille,775,315,0,640,920,800
+Bordeaux,585,540,640,0,340,870
+Nantes,385,660,920,340,0,830
+Strasbourg,490,490,800,870,830,0
