@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bf45c2fe5dd54c394895efd203f83386 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 1000;
+     background: white; padding: 10px; border-radius: 8px;
+     border: 2px solid grey; font-size: 13px;">
+    <b>Légende</b><br>
+    🏠 Dépôt ouvert<br>
+    🟠 Zone sinistrée<br>
+    — Flux de livraison
+</div>
+    
+            <div class="folium-map" id="map_bf45c2fe5dd54c394895efd203f83386" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bf45c2fe5dd54c394895efd203f83386 = L.map(
+                "map_bf45c2fe5dd54c394895efd203f83386",
+                {
+                    center: [9.0, 2.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d754d7c157320fa857d786d178f5f224 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d754d7c157320fa857d786d178f5f224.addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+            var marker_0ab5da44e40b1f4fa9849f558ad34ff4 = L.marker(
+                [9.3372, 2.6282],
+                {
+}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+            var icon_1214a4b8b0692ea35b63911cf03e1203 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0ffa1a0703053a5404205a7f574ef19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22e6a6e01c8bd37917210ddedc0514a0 = $(`<div id="html_22e6a6e01c8bd37917210ddedc0514a0" style="width: 100.0%; height: 100.0%;"><b>Dépôt : Parakou</b><br>Capacité : 400 <br>Coût fixe : 12,000 FCFA</div>`)[0];
+                popup_f0ffa1a0703053a5404205a7f574ef19.setContent(html_22e6a6e01c8bd37917210ddedc0514a0);
+            
+        
+
+        marker_0ab5da44e40b1f4fa9849f558ad34ff4.bindPopup(popup_f0ffa1a0703053a5404205a7f574ef19)
+        ;
+
+        
+    
+    
+                marker_0ab5da44e40b1f4fa9849f558ad34ff4.setIcon(icon_1214a4b8b0692ea35b63911cf03e1203);
+            
+    
+            var marker_53c5640d23eb7293f3022a4eeb9a8ab8 = L.marker(
+                [7.1833, 1.9833],
+                {
+}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+            var icon_7e41866ad217465b546f27d3878d2283 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df376e9a2620631a744081c230ca34c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88ca4ef084f32eaaaf6c05cbd7560d54 = $(`<div id="html_88ca4ef084f32eaaaf6c05cbd7560d54" style="width: 100.0%; height: 100.0%;"><b>Dépôt : Abomey</b><br>Capacité : 300 <br>Coût fixe : 10,000 FCFA</div>`)[0];
+                popup_df376e9a2620631a744081c230ca34c0.setContent(html_88ca4ef084f32eaaaf6c05cbd7560d54);
+            
+        
+
+        marker_53c5640d23eb7293f3022a4eeb9a8ab8.bindPopup(popup_df376e9a2620631a744081c230ca34c0)
+        ;
+
+        
+    
+    
+                marker_53c5640d23eb7293f3022a4eeb9a8ab8.setIcon(icon_7e41866ad217465b546f27d3878d2283);
+            
+    
+            var marker_f70a69730cf6ff7bc79701f542050582 = L.marker(
+                [10.3167, 1.3833],
+                {
+}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+            var icon_8e210c1e1fcd5b62d47c8fbc270be82b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1c5891eaf970d95b35b11c221c065d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99197223c3a65dfe5cb10f7b6f6b7eaf = $(`<div id="html_99197223c3a65dfe5cb10f7b6f6b7eaf" style="width: 100.0%; height: 100.0%;"><b>Dépôt : Natitingou</b><br>Capacité : 250 <br>Coût fixe : 9,000 FCFA</div>`)[0];
+                popup_a1c5891eaf970d95b35b11c221c065d4.setContent(html_99197223c3a65dfe5cb10f7b6f6b7eaf);
+            
+        
+
+        marker_f70a69730cf6ff7bc79701f542050582.bindPopup(popup_a1c5891eaf970d95b35b11c221c065d4)
+        ;
+
+        
+    
+    
+                marker_f70a69730cf6ff7bc79701f542050582.setIcon(icon_8e210c1e1fcd5b62d47c8fbc270be82b);
+            
+    
+            var circle_marker_6ddcb10742f28c2d84344d9204c8628d = L.circleMarker(
+                [11.8667, 3.3833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_6417b86cb23b78ea84a5bdd2b36841be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a69a6ddd883c863ec8ff8c6d888c8576 = $(`<div id="html_a69a6ddd883c863ec8ff8c6d888c8576" style="width: 100.0%; height: 100.0%;"><b>Zone : Malanville</b><br>Demande : 120 </div>`)[0];
+                popup_6417b86cb23b78ea84a5bdd2b36841be.setContent(html_a69a6ddd883c863ec8ff8c6d888c8576);
+            
+        
+
+        circle_marker_6ddcb10742f28c2d84344d9204c8628d.bindPopup(popup_6417b86cb23b78ea84a5bdd2b36841be)
+        ;
+
+        
+    
+    
+            var circle_marker_c83e1e00b06fca52064ebc540ceca784 = L.circleMarker(
+                [11.1333, 2.9333],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_e6b9b6582734469f72595d3ee76d2b0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdc4520e782265c8ece382c29ec86d37 = $(`<div id="html_fdc4520e782265c8ece382c29ec86d37" style="width: 100.0%; height: 100.0%;"><b>Zone : Kandi</b><br>Demande : 100 </div>`)[0];
+                popup_e6b9b6582734469f72595d3ee76d2b0b.setContent(html_fdc4520e782265c8ece382c29ec86d37);
+            
+        
+
+        circle_marker_c83e1e00b06fca52064ebc540ceca784.bindPopup(popup_e6b9b6582734469f72595d3ee76d2b0b)
+        ;
+
+        
+    
+    
+            var circle_marker_b1abde4a407f0470ec50bf0a63ede01b = L.circleMarker(
+                [10.2167, 2.6667],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_b71fa288890c45832b63f70f04b95f85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed481f3e7ae6c1c1b920d2da0b72b95b = $(`<div id="html_ed481f3e7ae6c1c1b920d2da0b72b95b" style="width: 100.0%; height: 100.0%;"><b>Zone : Bembéréké</b><br>Demande : 80 </div>`)[0];
+                popup_b71fa288890c45832b63f70f04b95f85.setContent(html_ed481f3e7ae6c1c1b920d2da0b72b95b);
+            
+        
+
+        circle_marker_b1abde4a407f0470ec50bf0a63ede01b.bindPopup(popup_b71fa288890c45832b63f70f04b95f85)
+        ;
+
+        
+    
+    
+            var circle_marker_a506c3f46f07664bf0ad151bc66cd317 = L.circleMarker(
+                [9.9333, 3.2167],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_6d8cf03e4922f38b152cc5f0bca11238 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56c6f5c925cea12a38959f9460df6413 = $(`<div id="html_56c6f5c925cea12a38959f9460df6413" style="width: 100.0%; height: 100.0%;"><b>Zone : Nikki</b><br>Demande : 90 </div>`)[0];
+                popup_6d8cf03e4922f38b152cc5f0bca11238.setContent(html_56c6f5c925cea12a38959f9460df6413);
+            
+        
+
+        circle_marker_a506c3f46f07664bf0ad151bc66cd317.bindPopup(popup_6d8cf03e4922f38b152cc5f0bca11238)
+        ;
+
+        
+    
+    
+            var circle_marker_9a7e35ede6dcd4a2ea63d8c45464c6d6 = L.circleMarker(
+                [9.6833, 1.6667],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_d4b5be58f0a72e0ec5d5f55c378c440d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9bcec4e1dd4d51b23e71f5e648e4a22 = $(`<div id="html_f9bcec4e1dd4d51b23e71f5e648e4a22" style="width: 100.0%; height: 100.0%;"><b>Zone : Djougou</b><br>Demande : 110 </div>`)[0];
+                popup_d4b5be58f0a72e0ec5d5f55c378c440d.setContent(html_f9bcec4e1dd4d51b23e71f5e648e4a22);
+            
+        
+
+        circle_marker_9a7e35ede6dcd4a2ea63d8c45464c6d6.bindPopup(popup_d4b5be58f0a72e0ec5d5f55c378c440d)
+        ;
+
+        
+    
+    
+            var circle_marker_2018bb9ec34b6279434d4f254d0fabb6 = L.circleMarker(
+                [7.9333, 1.9667],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_edea9cb7b7eafa7398f406d70fb5773e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fd0bf24e3b815ed3b2ccde42f85e747 = $(`<div id="html_0fd0bf24e3b815ed3b2ccde42f85e747" style="width: 100.0%; height: 100.0%;"><b>Zone : Savalou</b><br>Demande : 75 </div>`)[0];
+                popup_edea9cb7b7eafa7398f406d70fb5773e.setContent(html_0fd0bf24e3b815ed3b2ccde42f85e747);
+            
+        
+
+        circle_marker_2018bb9ec34b6279434d4f254d0fabb6.bindPopup(popup_edea9cb7b7eafa7398f406d70fb5773e)
+        ;
+
+        
+    
+    
+            var circle_marker_6f8ad1588e24e30f633d4adc5848fbb2 = L.circleMarker(
+                [7.1833, 2.0667],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_bdb85ea131fe04bd843e6b2bd729c380 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95af3b7b066c47d881a2e44c78d3ffe1 = $(`<div id="html_95af3b7b066c47d881a2e44c78d3ffe1" style="width: 100.0%; height: 100.0%;"><b>Zone : Bohicon</b><br>Demande : 95 </div>`)[0];
+                popup_bdb85ea131fe04bd843e6b2bd729c380.setContent(html_95af3b7b066c47d881a2e44c78d3ffe1);
+            
+        
+
+        circle_marker_6f8ad1588e24e30f633d4adc5848fbb2.bindPopup(popup_bdb85ea131fe04bd843e6b2bd729c380)
+        ;
+
+        
+    
+    
+            var circle_marker_665d5a2003d173bbc5943bbe1ec18aee = L.circleMarker(
+                [6.6333, 1.7167],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_6c69eaae04e2e94cced227468ae98179 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ea253152008a93158b82a15ff68ca54 = $(`<div id="html_0ea253152008a93158b82a15ff68ca54" style="width: 100.0%; height: 100.0%;"><b>Zone : Lokossa</b><br>Demande : 85 </div>`)[0];
+                popup_6c69eaae04e2e94cced227468ae98179.setContent(html_0ea253152008a93158b82a15ff68ca54);
+            
+        
+
+        circle_marker_665d5a2003d173bbc5943bbe1ec18aee.bindPopup(popup_6c69eaae04e2e94cced227468ae98179)
+        ;
+
+        
+    
+    
+            var circle_marker_d7f53b69439f86f6ec4e1c7c906a221f = L.circleMarker(
+                [6.35, 2.0833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_3084d1de7674d520fb6e4a9149213685 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e604f568b1c24be3d556ca85d9aea05a = $(`<div id="html_e604f568b1c24be3d556ca85d9aea05a" style="width: 100.0%; height: 100.0%;"><b>Zone : Ouidah</b><br>Demande : 70 </div>`)[0];
+                popup_3084d1de7674d520fb6e4a9149213685.setContent(html_e604f568b1c24be3d556ca85d9aea05a);
+            
+        
+
+        circle_marker_d7f53b69439f86f6ec4e1c7c906a221f.bindPopup(popup_3084d1de7674d520fb6e4a9149213685)
+        ;
+
+        
+    
+    
+            var circle_marker_338f4fbd9abae40a08da50b8df08ec8f = L.circleMarker(
+                [6.4, 1.8667],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_4dbfce63e69dba8a72a6bc00b961b7c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c657f0c53378c8f7aac23dec37c6551d = $(`<div id="html_c657f0c53378c8f7aac23dec37c6551d" style="width: 100.0%; height: 100.0%;"><b>Zone : Comè</b><br>Demande : 60 </div>`)[0];
+                popup_4dbfce63e69dba8a72a6bc00b961b7c6.setContent(html_c657f0c53378c8f7aac23dec37c6551d);
+            
+        
+
+        circle_marker_338f4fbd9abae40a08da50b8df08ec8f.bindPopup(popup_4dbfce63e69dba8a72a6bc00b961b7c6)
+        ;
+
+        
+    
+    
+            var poly_line_713e996ca663216a5080da533d2c4a7b = L.polyline(
+                [[9.3372, 2.6282], [11.1333, 2.9333]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.0}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_2177356a475b8028976daaa8c0ff9a8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6444acef9f79189587232b3c970e06c8 = $(`<div id="html_6444acef9f79189587232b3c970e06c8" style="width: 100.0%; height: 100.0%;">Parakou → Kandi : 80 t</div>`)[0];
+                popup_2177356a475b8028976daaa8c0ff9a8e.setContent(html_6444acef9f79189587232b3c970e06c8);
+            
+        
+
+        poly_line_713e996ca663216a5080da533d2c4a7b.bindPopup(popup_2177356a475b8028976daaa8c0ff9a8e)
+        ;
+
+        
+    
+    
+            var poly_line_33f1d6fa03c843de1a99eca879fa72dd = L.polyline(
+                [[9.3372, 2.6282], [10.2167, 2.6667]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.0}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_e3135479409a8f7194964e5bb80997d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3121b14157ec652b3dcb78d5c24b240 = $(`<div id="html_e3121b14157ec652b3dcb78d5c24b240" style="width: 100.0%; height: 100.0%;">Parakou → Bembéréké : 80 t</div>`)[0];
+                popup_e3135479409a8f7194964e5bb80997d4.setContent(html_e3121b14157ec652b3dcb78d5c24b240);
+            
+        
+
+        poly_line_33f1d6fa03c843de1a99eca879fa72dd.bindPopup(popup_e3135479409a8f7194964e5bb80997d4)
+        ;
+
+        
+    
+    
+            var poly_line_804473982e40a486d4972f9d41c23fb2 = L.polyline(
+                [[9.3372, 2.6282], [9.9333, 3.2167]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.5}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_e729a25bb011ba2d3e1ef3e6fa1cc6e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b0e47d6a01c2c8bd2bcf3c8926a9b68 = $(`<div id="html_5b0e47d6a01c2c8bd2bcf3c8926a9b68" style="width: 100.0%; height: 100.0%;">Parakou → Nikki : 90 t</div>`)[0];
+                popup_e729a25bb011ba2d3e1ef3e6fa1cc6e4.setContent(html_5b0e47d6a01c2c8bd2bcf3c8926a9b68);
+            
+        
+
+        poly_line_804473982e40a486d4972f9d41c23fb2.bindPopup(popup_e729a25bb011ba2d3e1ef3e6fa1cc6e4)
+        ;
+
+        
+    
+    
+            var poly_line_3a129a83409c2bf621b28f53a6a577d6 = L.polyline(
+                [[9.3372, 2.6282], [7.9333, 1.9667]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.75}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_a01b119cc425e6f1929c8094c5c88fc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7d64c94016ab0e1387f2a543240e7a7 = $(`<div id="html_c7d64c94016ab0e1387f2a543240e7a7" style="width: 100.0%; height: 100.0%;">Parakou → Savalou : 75 t</div>`)[0];
+                popup_a01b119cc425e6f1929c8094c5c88fc5.setContent(html_c7d64c94016ab0e1387f2a543240e7a7);
+            
+        
+
+        poly_line_3a129a83409c2bf621b28f53a6a577d6.bindPopup(popup_a01b119cc425e6f1929c8094c5c88fc5)
+        ;
+
+        
+    
+    
+            var poly_line_f29e03f888d8fa17ff911c438417f212 = L.polyline(
+                [[9.3372, 2.6282], [7.1833, 2.0667]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_4649739c822745e52b8e31fad4e4ea27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea2046fc7ca8294fe51000d5c9c5a7fa = $(`<div id="html_ea2046fc7ca8294fe51000d5c9c5a7fa" style="width: 100.0%; height: 100.0%;">Parakou → Bohicon : 10 t</div>`)[0];
+                popup_4649739c822745e52b8e31fad4e4ea27.setContent(html_ea2046fc7ca8294fe51000d5c9c5a7fa);
+            
+        
+
+        poly_line_f29e03f888d8fa17ff911c438417f212.bindPopup(popup_4649739c822745e52b8e31fad4e4ea27)
+        ;
+
+        
+    
+    
+            var poly_line_a7b15c3bd285cee7e2bb6f63da3c6171 = L.polyline(
+                [[7.1833, 1.9833], [7.1833, 2.0667]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.25}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_1f77e826b804b4c07b9d0a1efa11def5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ec2ed279351dbeb5d95dade0e7626d7 = $(`<div id="html_2ec2ed279351dbeb5d95dade0e7626d7" style="width: 100.0%; height: 100.0%;">Abomey → Bohicon : 85 t</div>`)[0];
+                popup_1f77e826b804b4c07b9d0a1efa11def5.setContent(html_2ec2ed279351dbeb5d95dade0e7626d7);
+            
+        
+
+        poly_line_a7b15c3bd285cee7e2bb6f63da3c6171.bindPopup(popup_1f77e826b804b4c07b9d0a1efa11def5)
+        ;
+
+        
+    
+    
+            var poly_line_f5bbe854ac5a63feb82ef6c29bb83875 = L.polyline(
+                [[7.1833, 1.9833], [6.6333, 1.7167]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.25}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_b8bc61fedbe86e2b52f5441700afcfde = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc57ea6aa0f79552060c60cf97b27edc = $(`<div id="html_dc57ea6aa0f79552060c60cf97b27edc" style="width: 100.0%; height: 100.0%;">Abomey → Lokossa : 85 t</div>`)[0];
+                popup_b8bc61fedbe86e2b52f5441700afcfde.setContent(html_dc57ea6aa0f79552060c60cf97b27edc);
+            
+        
+
+        poly_line_f5bbe854ac5a63feb82ef6c29bb83875.bindPopup(popup_b8bc61fedbe86e2b52f5441700afcfde)
+        ;
+
+        
+    
+    
+            var poly_line_64794952f39def20f9589ed66d35f7a7 = L.polyline(
+                [[7.1833, 1.9833], [6.35, 2.0833]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_3b814ba8be1c504d873150328b7a11fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dce036af29ac16f999e886db4699cb3a = $(`<div id="html_dce036af29ac16f999e886db4699cb3a" style="width: 100.0%; height: 100.0%;">Abomey → Ouidah : 70 t</div>`)[0];
+                popup_3b814ba8be1c504d873150328b7a11fe.setContent(html_dce036af29ac16f999e886db4699cb3a);
+            
+        
+
+        poly_line_64794952f39def20f9589ed66d35f7a7.bindPopup(popup_3b814ba8be1c504d873150328b7a11fe)
+        ;
+
+        
+    
+    
+            var poly_line_7495cf1e7141428c64c7e388b1887870 = L.polyline(
+                [[7.1833, 1.9833], [6.4, 1.8667]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.0}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_6b41fea7f1936b45bb082277d5a36afc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f116a0c5b8a4f55668d2719cb899acb = $(`<div id="html_4f116a0c5b8a4f55668d2719cb899acb" style="width: 100.0%; height: 100.0%;">Abomey → Comè : 60 t</div>`)[0];
+                popup_6b41fea7f1936b45bb082277d5a36afc.setContent(html_4f116a0c5b8a4f55668d2719cb899acb);
+            
+        
+
+        poly_line_7495cf1e7141428c64c7e388b1887870.bindPopup(popup_6b41fea7f1936b45bb082277d5a36afc)
+        ;
+
+        
+    
+    
+            var poly_line_d7daebe22795169b44b87aa87903dcf1 = L.polyline(
+                [[10.3167, 1.3833], [11.8667, 3.3833]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 6.0}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_79eafdab3ebdb30e19def8fbfb264737 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cb25f1e6a3ad59b1208d808adc624f0 = $(`<div id="html_9cb25f1e6a3ad59b1208d808adc624f0" style="width: 100.0%; height: 100.0%;">Natitingou → Malanville : 120 t</div>`)[0];
+                popup_79eafdab3ebdb30e19def8fbfb264737.setContent(html_9cb25f1e6a3ad59b1208d808adc624f0);
+            
+        
+
+        poly_line_d7daebe22795169b44b87aa87903dcf1.bindPopup(popup_79eafdab3ebdb30e19def8fbfb264737)
+        ;
+
+        
+    
+    
+            var poly_line_37d7b64d23ddf0bcc96d26cbf8a4d7f2 = L.polyline(
+                [[10.3167, 1.3833], [11.1333, 2.9333]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_c6afed3ca231a3b3a0bd8972c0253703 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_223b0a4dabf0fef7b46cccbb68c5db12 = $(`<div id="html_223b0a4dabf0fef7b46cccbb68c5db12" style="width: 100.0%; height: 100.0%;">Natitingou → Kandi : 20 t</div>`)[0];
+                popup_c6afed3ca231a3b3a0bd8972c0253703.setContent(html_223b0a4dabf0fef7b46cccbb68c5db12);
+            
+        
+
+        poly_line_37d7b64d23ddf0bcc96d26cbf8a4d7f2.bindPopup(popup_c6afed3ca231a3b3a0bd8972c0253703)
+        ;
+
+        
+    
+    
+            var poly_line_0a27dd37c2e67fe3b386821245a4252b = L.polyline(
+                [[10.3167, 1.3833], [9.6833, 1.6667]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5.5}
+            ).addTo(map_bf45c2fe5dd54c394895efd203f83386);
+        
+    
+        var popup_7594e9aee6a6b7bdbbcb47af7de0cd3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_590d5a90fd746032757a37790fa56843 = $(`<div id="html_590d5a90fd746032757a37790fa56843" style="width: 100.0%; height: 100.0%;">Natitingou → Djougou : 110 t</div>`)[0];
+                popup_7594e9aee6a6b7bdbbcb47af7de0cd3e.setContent(html_590d5a90fd746032757a37790fa56843);
+            
+        
+
+        poly_line_0a27dd37c2e67fe3b386821245a4252b.bindPopup(popup_7594e9aee6a6b7bdbbcb47af7de0cd3e)
+        ;
+
+        
+    
+</script>
+</html>
