@@ -7,10 +7,6 @@ maximiser le profit total en tenant compte des coûts de transport, des
 pertes post-récolte liées au temps de trajet, ainsi que des contraintes 
 de production, de demande et de capacité de transport.
 
-Les contraintes étant données sous forme descriptive dans l'énoncé 
-initial, une modélisation mathématique rigoureuse a été proposée avec 
-des hypothèses explicites (voir documentation).
-
 ## Modèle mathématique
 
 ### Variables de décision
