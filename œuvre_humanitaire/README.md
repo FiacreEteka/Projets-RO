@@ -10,15 +10,15 @@ de chaque zone.
 ## Modèle mathématique
 
 ### Paramètres
-- **f_i** — coût fixe d'ouverture du dépôt i
-- **c_ij** — coût de transport du dépôt i vers la zone j
-- **d_j** — demande de la zone sinistrée j (tonnes)
-- **cap_i** — capacité maximale du dépôt i
-- **M** — nombre maximum de dépôts à ouvrir
+- **f_i**  coût fixe d'ouverture du dépôt i
+- **c_ij**  coût de transport du dépôt i vers la zone j
+- **d_j** demande de la zone sinistrée j (tonnes)
+- **cap_i**  capacité maximale du dépôt i
+- **M**  nombre maximum de dépôts à ouvrir
 
 ### Variables de décision
-- **y_i ∈ {0,1}** — 1 si le dépôt i est ouvert, 0 sinon
-- **x_ij ≥ 0** — quantité de secours (tonnes) envoyée du dépôt i vers la zone j
+- **y_i ∈ {0,1}**  1 si le dépôt i est ouvert, 0 sinon
+- **x_ij ≥ 0**  quantité de secours (tonnes) envoyée du dépôt i vers la zone j
 
 ### Objectif
 Min Z = Σ_i f_i * y_i + Σ_i Σ_j c_ij * x_ij
@@ -53,6 +53,9 @@ supplémentaires n'apporte aucun bénéfice économique.
 | Cotonou | Ouidah, Comè | 130/500 t |
 
 ## Structure du projet
+
+
+```
 œuvre_humanitaire/
 ├── data/
 │ ├── depots.csv
@@ -68,6 +71,7 @@ supplémentaires n'apporte aucun bénéfice économique.
 ├── script/
 |└── script.py
 └── README.md
+```
 
 ## Outils
 - Python 3.12

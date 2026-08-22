@@ -8,8 +8,8 @@ Une entreprise de livraison basée à Paris dispose de 3 véhicules
 ## Modèle mathématique
 
 ### Variables de décision
-- **x_ijk ∈ {0,1}** — 1 si le véhicule k va directement de la ville i à la ville j
-- **u_i ∈ {1,...,n-1}** — position de la ville i dans la tournée (MTZ)
+- **x_ijk ∈ {0,1}** :  1 si le véhicule k va directement de la ville i à la ville j
+- **u_i ∈ {1,...,n-1}**  position de la ville i dans la tournée (MTZ)
 
 ### Objectif
 Minimiser la distance totale : Min Z = Σ_i Σ_j Σ_k d_ij * x_ijk
@@ -37,6 +37,8 @@ Les distances entre villes sont calculées via la **formule de Haversine**
 à partir des coordonnées GPS réelles des villes françaises.
 
 ## Structure du projet
+
+```
 vrp/
 ├── data/
 │ ├── villes.csv
@@ -45,7 +47,7 @@ vrp/
 ├── script/
 │ └── script.py
 └── README.md
-
+```
 ## Outils
 - Python 3.12
 - PuLP

@@ -8,8 +8,8 @@ de graphe.
 
 ## Modèle mathématique
 - **Variables** :
-  - x_ij ∈ {0,1} — 1 si la matière i est affectée au créneau j
-  - y_j ∈ {0,1} — 1 si le créneau j est utilisé
+  - x_ij ∈ {0,1} 1 si la matière i est affectée au créneau j
+  - y_j ∈ {0,1} 1 si le créneau j est utilisé
 - **Objectif** : Minimiser le nombre de créneaux utilisés
 - **Contraintes** :
   - Chaque matière est affectée à exactement un créneau

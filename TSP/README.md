@@ -9,8 +9,8 @@ entiers avec les contraintes MTZ pour éliminer les sous-tours.
 ## Modèle mathématique
 
 ### Variables de décision
-- **x_ij ∈ {0,1}** — 1 si on va directement de la ville i à la ville j
-- **u_i ∈ {1,...,n-1}** — position de la ville i dans le tour (MTZ)
+- **x_ij ∈ {0,1}** 1 si on va directement de la ville i à la ville j
+- **u_i ∈ {1,...,n-1}** position de la ville i dans le tour (MTZ)
 
 ### Objectif
 Minimiser la distance totale : Min Z = Σ_i Σ_j d_ij * x_ij

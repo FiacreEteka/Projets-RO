@@ -54,5 +54,12 @@ Optimisation de l'aide humanitaire après une inondation au Bénin.
 - **Méthode** : PLNE mixte (variables binaires + continues)
 - **Impact** : Analyse de sensibilité sur le nombre de dépôts
 
+### 8. [Chaîne logistique agricole](./agricole/)
+Maximisation du profit d'une coopérative agricole sous contraintes de 
+production, demande et pertes post-récolte. Comparaison de trois 
+approches : solveur exact, heuristique gloutonne et algorithme génétique.
+- **Outils** : PuLP, algorithmes génétiques, pandas
+- **Méthode** : PLNE + heuristique + métaheuristique (analyse comparative)
+
 ## Auteur
 Fiacre Eteka — Master 1
