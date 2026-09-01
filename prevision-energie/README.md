@@ -18,7 +18,7 @@ les variables catégorielles, et analyse d'autocorrélation (ACF).
 - La **température** est le facteur dominant (r = 0.70, p < 0.001)
 - **HVACUsage** est le facteur catégoriel le plus significatif (ANOVA F = 89.22)
 - **SquareFootage** et **DayOfWeek** n'ont aucun effet significatif
-- **Absence d'autocorrélation** temporelle (ACF) → justifie une approche 
+- **Absence d'autocorrélation** temporelle (ACF) justifie une approche 
   de régression classique plutôt qu'une méthode de série temporelle
 
 ## Partie 2 Modélisation prédictive
@@ -31,11 +31,6 @@ d'usage :
 |---|---|---|
 | Régression Linéaire | 4.11 | 0.598 |
 | Random Forest | 4.38 | 0.545 |
-
-**Analyse des résidus :** distribution centrée sur 0, en cloche, sans 
-motif particulier dans le nuage de résidus — confirmant l'absence de 
-biais systématique. La variance non expliquée (~40 %) est attribuée 
-au caractère bruité du jeu de données plutôt qu'à une limite du modèle.
 
 **Importance des variables (Random Forest) :**
 ```
@@ -62,9 +57,9 @@ d'allocation sous contrainte.
 ### Modèle mathématique
 
 **Variables de décision**
-$$x_i \in \{0,1\} \quad \text{— activer le HVAC dans le bâtiment } i$$
+$$x_i \in \{0,1\} \quad \text{activer le HVAC dans le bâtiment } i$$
 
-**Fonction objectif** — maximiser le confort total des occupants
+**Fonction objectif** maximiser le confort total des occupants
 $$\max Z = \sum_{i} confort_i \cdot x_i$$
 
 **Contrainte de budget**
