@@ -61,5 +61,12 @@ approches : solveur exact, heuristique gloutonne et algorithme génétique.
 - **Outils** : PuLP, algorithmes génétiques, pandas
 - **Méthode** : PLNE + heuristique + métaheuristique (analyse comparative)
 
+### 9. [Prédiction de la Consommation Énergétique & Allocation de Ressources](./prevision-energie/)
+Régression supervisée (Temperature, HVACUsage, Occupancy) combinée à 
+une optimisation d'allocation de budget énergétique sous contrainte. 
+Seul projet du portfolio combinant explicitement data science et RO.
+- **Outils** : scikit-learn, PuLP, pandas, statsmodels
+- **Méthode** : régression linéaire/Random Forest + PLNE binaire (allocation de ressources)
+
 ## Auteur
 Fiacre Eteka — Master 1
